@@ -1,57 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media screen and (min-width:786px) {
-    .grid-container {
+@media screen and (max-width: 786px) {
+  .grid-container {
     display: grid;
     width: 100%;
     height: 100vh;
     grid-gap: 10px;
     margin: 10px;
-    grid-template-areas: 
-    "Header Header Header Header"
-    "Aside Nav Nav Nav"
-    "Aside Main Main Main"
-    "Footer Footer Footer Footer";
-    grid-template-rows: 50px 1fr 2fr;
-    grid-template-columns: 300px 1fr;
-    }
+    grid-template-areas:
+      "Header Header Header"
+      "Nav Nav Nav"
+      "Main Main Main"
+      "Main Main Main"
+      "Footer Footer Footer";
+    grid-template-rows: 1fr 1fr 2fr 3fr 1fr;
+  }
+
+  #center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  .grid-container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-gap: 10px;
+    margin: 10px;
+    grid-template-areas:
+      "Header Header Header Header"
+      "Aside Nav Nav Nav"
+      "Aside Main Main Main"
+      "Aside Main Main Main"
+      "Footer Footer Footer Footer";
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+  }
 }
 
 .grid-container > header {
-    grid-area: Header;
-    background-color: black;
-    color: white;
-    padding: 15px;
+  display: grid;
+  grid-area: Header;
+  background-color: black;
+  color: white;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
 }
 
 .grid-container > nav {
-    grid-area: Nav;
-    background-color: #FAD889;
-    color: white;
-    text-align: center;
+  display: grid;
+  grid-area: Nav;
+  background-color: #fad889;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-container > main {
-    grid-area: Main;
-    background-color: lightgrey;
-    color: white;
+  display: grid;
+  grid-area: Main;
+  background-color: lightgrey;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-container > aside {
-    display: grid;
-    grid-area: Aside;
-    background-color: orange;
-    color: white;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-area: Aside;
+  background-color: orange;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-container > footer {
-    grid-area: Footer;
-    background-color: black;
-    color: white;
+  display: grid;
+  grid-area: Footer;
+  background-color: black;
+  color: white;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
 }
