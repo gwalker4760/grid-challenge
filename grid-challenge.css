@@ -1,96 +1,36 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-@media screen and (max-width: 786px) {
-  .grid-container {
-    display: grid;
+img {
     width: 100%;
-    height: 100vh;
-    grid-gap: 10px;
-    margin: 10px;
-    grid-template-areas:
-      "Header Header Header"
-      "Nav Nav Nav"
-      "Main Main Main"
-      "Main Main Main"
-      "Footer Footer Footer";
-    grid-template-rows: 1fr 1fr 2fr 3fr 1fr;
-  }
+    height: 100%;
+    object-fit: cover;
+}
 
-  #center {
-    display: grid;
-    justify-content: center;
+
+.grid-container {
+    display: flex;
     align-items: center;
-  }
-
-  #hidden {
-    display: none;
-  }
 }
 
+#nav {
+    display: flex;
+    justify-content: flex-end
+}
+
+/* mobile devices */
+@media screen and (min-width: 600px) {
+
+}
+
+/* tablets */
+@media screen and (max-width: 786px) {
+
+}
+
+/* desktop */
 @media screen and (min-width: 786px) {
-  .grid-container {
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    grid-gap: 10px;
-    margin: 10px;
-    grid-template-areas:
-      "Header Header Header Header"
-      "Aside Nav Nav Nav"
-      "Aside Main Main Main"
-      "Aside Main Main Main"
-      "Footer Footer Footer Footer";
-    grid-template-rows: 1fr 1fr 3fr 2fr 1fr;
-  }
-}
-
-.grid-container > header {
-  display: grid;
-  grid-area: Header;
-  background-color: black;
-  color: white;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
-}
-
-.grid-container > nav {
-  display: grid;
-  grid-area: Nav;
-  background-color: #fad889;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid-container > main {
-  display: grid;
-  grid-area: Main;
-  background-color: lightgrey;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid-container > aside {
-  display: grid;
-  grid-area: Aside;
-  background-color: orange;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid-container > footer {
-  display: grid;
-  grid-area: Footer;
-  background-color: black;
-  color: white;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
+        
 }
